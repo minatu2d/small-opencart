@@ -31,6 +31,12 @@
         <span><?php echo $text_reward; ?></span> <?php echo $reward; ?><br />
         <?php } ?>
         <span><?php echo $text_stock; ?></span> <?php echo $stock; ?></div>
+<!-- TUPV ADD START -->        
+      <div class="price">
+		  <?php echo $text_pc_price_latest; ?>
+		  <span class="price-new"><?php echo $price; ?></span>
+       </div>
+<!-- TUPV ADD END -->        
       <?php if ($price) { ?>
       <div class="price"><?php echo $text_price; ?>
         <?php if (!$special) { ?>
@@ -221,7 +227,12 @@
       <div class="cart">
         <div><?php echo $text_qty; ?>
           <input type="text" name="quantity" size="2" value="<?php echo $minimum; ?>" />
+          &nbsp;
           <input type="hidden" name="product_id" size="2" value="<?php echo $product_id; ?>" />
+<!-- TUPV ADD START -->
+          <?php echo $text_pc_price; ?>
+          <input type="text" name="product_purchase_prices" size="2" value="<?php echo $price; ?>" />
+<!-- TUPV ADD END -->
           &nbsp;
           <input type="button" value="<?php echo $button_cart; ?>" id="button-cart" class="button" />
           <span>&nbsp;&nbsp;<?php echo $text_or; ?>&nbsp;&nbsp;</span>
@@ -235,7 +246,8 @@
       <?php if ($review_status) { ?>
       <div class="review">
         <div><img src="catalog/view/theme/default/image/stars-<?php echo $rating; ?>.png" alt="<?php echo $reviews; ?>" />&nbsp;&nbsp;<a onclick="$('a[href=\'#tab-review\']').trigger('click');"><?php echo $reviews; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('a[href=\'#tab-review\']').trigger('click');"><?php echo $text_write; ?></a></div>
-        <div class="share"><!-- AddThis Button BEGIN -->
+        <div class="share">
+			<!-- AddThis Button BEGIN -->
           <div class="addthis_default_style"><a class="addthis_button_compact"><?php echo $text_share; ?></a> <a class="addthis_button_email"></a><a class="addthis_button_print"></a> <a class="addthis_button_facebook"></a> <a class="addthis_button_twitter"></a></div>
           <script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js"></script> 
           <!-- AddThis Button END --> 

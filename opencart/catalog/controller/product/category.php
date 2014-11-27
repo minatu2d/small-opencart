@@ -114,12 +114,17 @@ class ControllerProductCategory extends Controller {
 			$this->data['text_sort'] = $this->language->get('text_sort');
 			$this->data['text_limit'] = $this->language->get('text_limit');
 
+// TUPV ADD START
 			if ($this->customer->isOperator() == true) {/* Check for operator */
 				$this->data['button_cart'] = $this->language->get('button_cart_operator');
+				$this->data['button_view_to_purchase'] = $this->language->get('button_cart_operator');
+				$this->data['isOperator'] = true;	/* Set isOperator flag is true */
 			}
 			else {
 				$this->data['button_cart'] = $this->language->get('button_cart');
+				$this->data['isOperator'] = false; /* Set isOperator flag is false */
 			}
+// TUPV ADD START			
 			$this->data['button_wishlist'] = $this->language->get('button_wishlist');
 			$this->data['button_compare'] = $this->language->get('button_compare');
 			$this->data['button_continue'] = $this->language->get('button_continue');

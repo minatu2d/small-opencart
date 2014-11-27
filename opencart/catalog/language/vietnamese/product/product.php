@@ -59,4 +59,10 @@ $_['error_captcha']     = 'Lỗi: Mã kiểm tra không chính xác!';
 $_['error_upload']      = 'Cần tải lên tập tin!';
 $_['error_filename']    = 'Tên tập tin từ 3 đến 128 kí tự!';
 $_['error_filetype']    = 'Kiểu file không hợp lệ!';
+
+// TUPV ADD START
+$_['text_pc_price']    = 'Giá nhập mới:';
+$_['text_pc_price_latest']    = 'Giá nhập gần nhất: ';
+
+// TUPV ADD END
 ?>

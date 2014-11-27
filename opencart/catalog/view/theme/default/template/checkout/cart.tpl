@@ -70,14 +70,17 @@
               &nbsp;<a href="<?php echo $product['remove']; ?>"><img src="catalog/view/theme/default/image/remove.png" alt="<?php echo $button_remove; ?>" title="<?php echo $button_remove; ?>" /></a>
               </td>
             <td class="price">
+<!-- Checking logged in user is operator or not -->				
 				<?php if ($isOperator == false) {
 					echo $product['price']; 
 				} else { ?>
+<!-- If current user is not operator -->
 					<input type="text" name="price[<?php echo $product['key']; ?>]" value="<?php echo $product['price']; ?>" size="1" />
 					&nbsp;
               <input type="image" src="catalog/view/theme/default/image/update.png" alt="<?php echo $button_update; ?>" title="<?php echo $button_update; ?>" />
               &nbsp;<a href="<?php echo $product['remove']; ?>"><img src="catalog/view/theme/default/image/remove.png" alt="<?php echo $button_remove; ?>" title="<?php echo $button_remove; ?>" /></a>
 					<?php } ?>
+<!-- Checking logged in user is operator or not -->					
 			</td>
             <td class="total"><?php echo $product['total']; ?></td>
           </tr>

@@ -239,6 +239,10 @@ class ControllerProductProduct extends Controller {
 			$this->data['text_discount'] = $this->language->get('text_discount');
 			$this->data['text_stock'] = $this->language->get('text_stock');
 			$this->data['text_price'] = $this->language->get('text_price');
+// TUPV ADD START
+			$this->data['text_pc_price'] = $this->language->get('text_pc_price');
+			$this->data['text_pc_price_latest'] = $this->language->get('text_pc_price_latest');
+// TUPV ADD END			
 			$this->data['text_tax'] = $this->language->get('text_tax');
 			$this->data['text_discount'] = $this->language->get('text_discount');
 			$this->data['text_option'] = $this->language->get('text_option');
